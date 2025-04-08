@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+:root {
+  --main-font-size: 20px;
+  --h1-font-size: 50px;
+  --h2-font-size: 35px;
+  --font-style: "Poppins", sans-serif;
+  --header-background: #000;
+  --white: #fff;
+  --green: #046818;
+  --green-light: #007b19c4;
+  --background-footer: #232323f0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.max-width {
+  margin: auto;
+  max-width: 1200px;
+}
+
+body {
+  font-size: var(--main-font-size);
+  font-family: var(--font-style);
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: 200;
+}
+
+.menuDesplegable {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  min-width: 150px;
+}
+.menuDesplegable a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.menuDesplegable a:hover {
+  background-color: #f1f1f1;
+}
+
+.register-button {
+  position: relative;
+  border-radius: 1.2rem;
+  color: #fff;
+  padding: 0.5rem 3rem;
+  color: #2e2e2ebb;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: var(--font-style);
+  background-color: #41e600;
+  outline: none;
+  border: none;
+  margin-top: 2.6rem;
+}
+
+.register-button:hover {
+  cursor: pointer;
+}
+
+.option-register {
+  position: relative;
+  top: 5rem;
+  left: -10em;
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+}
+.fix-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.white-bar {
+  width: 100%;
+  height: 100px;
+}
+nav a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  position: relative;
+  bottom: -50px;
+  list-style: none;
+  color: #2e2e2ebb;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+  color: #000000bb;
+}
+
+.udc-logo-container {
+  margin-top: 0.03rem;
+  display: flex;
+  justify-content: center;
+}
+
+.udc-logo {
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  background-color: #fff;
+  padding: 0.5rem 3rem;
+  z-index: 50;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.udc-logo img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.coloquio-logo-container {
+  margin-top: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.empleadores {
+  margin-top: 5rem;
+}
+
+.coloquio-logo-container img {
+  width: 350px;
+}
+
+.content-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.content-image {
+  position: relative;
+}
+
+.content-image h1 {
+  font-size: var(--h1-font-size);
+  text-align: center;
+  color: #fff;
+}
+
+.button-register {
+  opacity: 90%;
+  margin-top: 100px;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--green);
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.button-register:hover {
+  opacity: 100%;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px,
+    rgba(255, 255, 255, 0.22) 0px 15px 12px;
+}
+
+.button-registro-container {
+  margin: 2rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.button-register a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1300px;
+  margin: auto;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+section p {
+  font-size: 28px;
+  text-align: justify;
+}
+
+article {
+  margin-top: 4rem;
+}
+
+article h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--green-light);
+}
+
+.company-section {
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.company-container img {
+  width: 200px;
+}
+
+.ponente {
+  display: flex;
+}
+
+.eventos h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.events table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.events th,
+.events td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.events th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.events td img {
+  margin: 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+footer {
+  padding: 4rem 0;
+  width: 100%;
+  height: auto;
+  background-color: #444444;
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsors-images {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+.university-images {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+#registered {
+  width: 20px;
+  height: 20px;
+}
+
+.university-images img {
+  width: auto;
+  height: 150px;
+  opacity: 0.5;
+}
+
+.sponsors-images img {
+  width: auto;
+  height: 50px;
+  opacity: 0.5;
+}
+
+.registered {
+  margin-right: 10px;
+}
+.colaboradores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.colaborador {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  flex-basis: calc(33.33% - 40px);
+  max-width: 250px;
+}
+
+.colaborador:first-of-type {
+  flex-basis: 100%;
+  max-width: none;
+}
+
+.colaborador img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+.company-container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.colaborador h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+
+footer .school-image {
+  width: 100px;
+  margin: 0 2rem;
+  opacity: 0.4;
+}
+@media screen and (max-width: 480px) {
+  header {
+    display: none;
+  }
+  .udc-logo img {
+    width: 100px;
+  }
+  .coloquio-logo-container img {
+    width: 250px;
+  }
+
+  .button-register {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--green);
+    font-weight: bold;
+    transition: none;
+  }
+
+  .company-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main {
+    margin: 0 2rem;
+    text-align: justify;
+  }
+  article h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--green-light);
+  }
+
+  section p {
+    font-size: 18px;
+  }
+
+  .company-container img {
+    width: 150px;
+  }
+  .table-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .events table {
+    font-size: 7px;
+  }
+
+  .events td img {
+    margin: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .modal-register-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-register-button ul a {
+    color: #000;
+  }
+
+  .modal-register-button ul li {
+    list-style: none;
+  }
+
+  .colaborador img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+  }
+
+  .colaborador h3 {
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #1f1f1f;
+    text-align: center;
+    color: var(--white);
+    font-size: 12px;
+  }
+
+  .sponsors-images {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan a la siguiente línea si es necesario */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 10px; /* Añade espacio entre las imágenes */
+  }
+
+  .sponsors-images img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-height: 150px; /* Puedes ajustar la altura máxima según tus necesidades */
+    object-fit: contain; /* Escala la imagen para que se ajuste al contenedor sin distorsión */
+  }
+
+  .first-section {
+    margin: 0 1rem;
+  }
+
+  .sponsors-images {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .university-images {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .university-images img {
+    width: auto;
+    height: 100px;
+    opacity: 0.5;
+  }
+
+  .sponsors-images img {
+    width: auto;
+    height: 50px;
+    opacity: 0.5;
+  }
+  footer img {
+    width: 12px;
+  }
+}
