@@ -70,3 +70,48 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("fixed");
   }
 });
+
+// En tu archivo JavaScript (o dentro de <script> en HTML)
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // Animación personalizada con JS
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      // Opcional: Añade clase activa al ítem del menú
+      document.querySelectorAll('.smooth-scroll').forEach(link => {
+        link.classList.remove('active');
+      });
+      this.classList.add('active');
+    }
+  });
+});
+
+function toggleMobileMenu() {
+  const menu = document.getElementById("main-menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// Cierra menús al hacer clic fuera
+document.addEventListener('click', function(e) {
+  const menuRegistro = document.getElementById("menuRegistro");
+  const mobileMenu = document.getElementById("main-menu");
+  
+  // Si el clic no fue en el botón de registro ni en su menú
+  if (!e.target.closest('.register-container')) {
+    menuRegistro.style.display = "none";
+  }
+  
+  // Si el clic no fue en el botón de hamburguesa ni en el menú
+  if (!e.target.closest('.mobile-menu-toggle') && !e.target.closest('#main-menu')) {
+    mobileMenu.style.display = "none";
+  }
+});
