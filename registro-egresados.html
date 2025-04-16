@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Coloquio 2025</title>
+  <style>
+    :root {
+      --primary-color: #d30808;
+      --secondary-color: #3498db;
+      --accent-color: #ff2626;
+      --light-color: #ecf0f1;
+      --dark-color: #d30808;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      background-image: url('logoColoquio2025.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60%;
+      opacity: 0.1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+      background-color: rgba(245, 247, 250, 0.85);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .description {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .registration-form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .required-field::after {
+      content: " *";
+      color: red;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      color: #000;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    }
+
+    button {
+      background-color: var(--accent-color);
+      color: white;
+      position: center;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 30%;
+      font-weight: 600;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #da2023;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 2rem;
+      }
+
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+
+      body::before {
+        background-size: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <h1>Registro de egresados Coloquio 2025</h1>
+    </header>
+
+    <section class="description">
+      <h2>¡Participa en el evento académico más importante del año!</h2>
+      <p>El Coloquio 2025 es una oportunidad única para conectarte con las principales empresas del sector, asistir a conferencias magistrales y participar en actividades especializadas. Este año contaremos con la presencia de representantes de las compañías más innovadoras que buscan talento joven como tú.</p>
+      <p>Al registrarte podrás:</p>
+      <ul>
+        <li>Acceder a todas las conferencias</li>
+        <li>conozcer las ventajas que ofrecen las empresas</li>
+        <li>identificar oportunidades en el ámbito de estancias profesionales o laborales</li>
+        <li>comprender los procedimientos necesarios para ser admitidos en dichas organizaciones</li>
+      </ul>
+      <p>Completa el siguiente formulario para asegurar tu lugar en este importante evento.</p>
+    </section>
+
+    <form class="registration-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="generacion" class="required-field">Generacion: (ejemplo)</label>
+          <input type="text" id="generacion" name="generacion" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nombre" class="required-field">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono" class="required-field">Teléfono contacto</label>
+          <input type="number" id="telefono" name="telefono" required>
+        </div>
+
+        <div class="form-group">
+          <label for="correoA">Correo adicional</label>
+          <input type="email" id="correoA" name="correoA">
+        </div>
+
+        <div class="form-group">
+            <label for="nombreM">Nombre de la empresa donde laboras</label>
+            <input type="text" id="nombreM" name="nombreM">
+          </div>
+
+        <div class="form-group">
+          <label for="carrera" class="required-field">Egresaste de la carrera en:</label>
+          <select id="carrera" name="carrera" required>
+            <option value="">Selecciona tu carrera</option>
+            <option value="Ingeniería en Sistemas">Ingeniería en Sistemas</option>
+            <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+            <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+            <option value="Arquitectura">Arquitectura</option>
+            <option value="Contaduría">Contaduría</option>
+            <option value="Administración">Administración</option>
+            <option value="Derecho">Derecho</option>
+          </select>
+        </div>
+    </div>
+
+      <button type="submit">Registrarme al Coloquio 2025</button>
+    </form>
+  </div>
+</body>
+</html>

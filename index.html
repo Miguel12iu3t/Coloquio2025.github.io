@@ -37,33 +37,36 @@
               <a href="#comite">
                 <li>Comité organizador</li>
               </a>
-              <button onclick="mostrarMenu()">Registro</button>
-
+              <li class="register-container">
+                <button class="register-button" onclick="mostrarMenu()">Registrate</button>
                 <div id="menuRegistro" class="menuDesplegable">
-                  <a href="#">Estudiante</a>
-                  <a href="#">Egresado</a>
+                  <a href="registro-estudiante.html">Estudiante</a> 
+                  <a href="registro-egresados.html">Egresada (os)</a>
                 </div>
-
-                <script>
-                  function mostrarMenu() {
-                    const menu = document.getElementById("menuRegistro");
-                    menu.style.display = menu.style.display === "block" ? "none" : "block";
-                  }
-                  window.onclick = function(e) {
-                  if (!e.target.matches('button')) {
-                    const menu = document.getElementById("menuRegistro");
-                    if (menu.style.display === "block") {
-                      menu.style.display = "none";
-                    }
-                  }
-                }
-                </script>
+              </li> 
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
+    <script>
+      function mostrarMenu() {
+        const menu = document.getElementById("menuRegistro");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Cierra el menú al hacer clic fuera
+      document.addEventListener('click', function(e) {
+        const menu = document.getElementById("menuRegistro");
+        const button = document.querySelector('.register-button');
+        
+        if (!e.target.closest('.register-container') && menu.style.display === "block") {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    
     <div class="udc-logo-container">
       <div class="udc-logo">
         <img src="./Images/University/logoUDC-horizontal.png" />
@@ -75,24 +78,13 @@
       <img class="empleadores" src="./Images/University/ForoEmpleadores2024-2.png" alt="" />
     </div>
 
-    <div class="button-registro-container">
-      <button id="mobile-button" class="register-button">Registro</button>
-    </div>
-
-    <div class="modal-register-button">
-      <ul id="options-mobile">
-        <li><a href="https://forms.gle/vRRj9wujYZ59ikG26" target="_blank">Estudiante</a> </li>
-        <li><a href="https://forms.gle/x8U9uVaiG79XCxbB8" target="_blank">Egresada (os)</a> </li>
-      </ul>
-    </div>
-
     <main>
       <section>
         <article> 
           <p>
             La Facultad de Ingeniería Mecánica y Eléctrica, extiende una cordial
             invitación a participar en el
-            <b>Coloquio de Vinculación Profesional (CVP 2024)</b>, que
+            <b>Coloquio de Vinculación Profesional (CVP 2025)</b>, que
             tiene como finalidad brindar un espacio para identificar áreas de
             oportunidad de vinculación Empresa-Universidad, a través de la
             estancia profesional o laboral.
@@ -492,8 +484,14 @@
             </thead>
             <tbody>
               <tr>
-                <td>Miércoles 5  de junio</td>
-                <td>14:30 a 16:00 hrs</td>
+                <td>Miércoles 4 de junio</td>
+                <td>9 a 9:30 hrs</td>
+                <td>INAUGURACIÓN</td>
+                <td>FIME- Cubículos Laboratorio de Ciencia de Datos</td>
+              </tr>
+              <tr>
+                <td>Miércoles 4 de junio</td>
+                <td>9 a 9:30 hrs</td>
                 <td>Predik Data</td>
                 <td>FIME- Cubículos Laboratorio de Ciencia de Datos</td>
               </tr>
@@ -659,25 +657,10 @@
       <h3 class="name"></h3>
     </div>
     <div class="colaborador">
-      <h3 class="name">Juan Diego Rocha Olivera </h3>
+      <h3 class="name">compañera</h3>
     </div>
     <div class="colaborador">
-      <h3 class="name">Héctor Eduardo Amaya González </h3>
-    </div>
-    <div class="colaborador">
-      <h3 class="name">Fernando Aguilar Gutiérrez</h3>
-    </div>
-    <div class="colaborador">
-      <h3 class="name">Daniel Alejandro Verduzco Valencia</h3>
-    </div>
-    <div class="colaborador">
-      <h3 class="name">Bernabé Fierros Carrillo</h3>
-    </div>
-    <div class="colaborador">
-      <h3 class="name">Olga Yarely Gutiérrez Martínez</h3>
-    </div>
-    <div class="colaborador">
-      <h3 class="name">Christopher Kurt Alcantar Contreras</h3>
+      <h3 class="name">compañero</h3>
     </div>
   </section>
 </article>
