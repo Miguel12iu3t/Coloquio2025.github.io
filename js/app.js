@@ -130,3 +130,27 @@ function adjustMobileLayout() {
 // Ejecutar al cargar y al redimensionar
 window.addEventListener('load', adjustMobileLayout);
 window.addEventListener('resize', adjustMobileLayout);
+
+let menuAbierto = false;
+
+function toggleMenu() {
+  const nav = document.getElementById("mainNav");
+  menuAbierto = !menuAbierto;
+  
+  if (menuAbierto) {
+    nav.style.display = "block";
+    // Cerrar otros menús si están abiertos
+    document.getElementById("menuRegistro").style.display = "none";
+  } else {
+    nav.style.display = "none";
+  }
+}
+
+// Cerrar menús al hacer clic fuera
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.mobile-menu-btn') && 
+      !e.target.closest('#mainNav') &&
+      menuAbierto) {
+    toggleMenu();
+  }
+});

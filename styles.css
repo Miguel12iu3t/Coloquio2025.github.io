@@ -91,86 +91,89 @@ body {
   cursor: pointer;
 }
 
+/* Header móvil compacto */
 @media screen and (max-width: 480px) {
-  /* Ajustes generales */
-  body {
-    text-align: center;
-    padding: 0 15px;
+  .white-bar {
+    height: 60px !important; /* Altura fija reducida */
+    overflow: hidden;
   }
-
-  /* Header para móvil */
-  header.white-bar {
-    height: auto;
+  
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .mobile-logo {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .mobile-logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  #mainNav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+  
+  #mainNav ul {
+    flex-direction: column;
     padding: 10px 0;
   }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Ajuste del logo principal */
-  .coloquio-logo-container {
-    margin-top: 80px; /* Espacio para el header fijo */
-  }
-
-  .coloquio-logo-container img {
-    width: 280px;
-  }
-
-  /* Contenido textual */
-  article p {
-    font-size: 16px;
-    line-height: 1.5;
+  
+  #mainNav li {
+    padding: 12px 20px;
     text-align: left;
-    padding: 0 10px;
-  }
-
-  /* Títulos */
-  article h2 {
-    font-size: 24px;
-    margin: 20px 0;
-  }
-
-  /* Menú de registro móvil */
-  .register-container {
-    order: 99; /* Lo coloca al final */
-    margin-top: 15px;
-  }
-
-  .register-button {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-/* Mejoras específicas para el contenido */
-@media screen and (max-width: 480px) {
-  /* Ajuste de párrafos introductorios */
-  main > section > article:first-child p {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  /* Corrección para listas */
-  ul, ol {
-    padding-left: 20px;
-    text-align: left;
-  }
-
-  /* Elementos en negrita */
-  b, strong {
-    font-weight: 600;
-  }
-
-  /* Espaciado entre secciones */
-  article {
-    margin-top: 30px;
-    padding-bottom: 20px;
     border-bottom: 1px solid #eee;
   }
+  
+  .register-container {
+    order: 0;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .register-button {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .menuDesplegable {
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  main {
+    margin-top: 60px !important;
+  }
+  
+  .udc-logo-container {
+    margin-top: 60px;
+  }
 }
+
+/* Ocultar elementos en desktop */
+@media screen and (min-width: 481px) {
+  .mobile-menu-btn, .mobile-logo {
+    display: none;
+  }
+}
+
 .register-button:active {
   transform: scale(0.98);
 }
