@@ -91,101 +91,21 @@ body {
   cursor: pointer;
 }
 
-/* Elimina este bloque si existe (está causando problemas) */
 @media screen and (max-width: 480px) {
-  header {
-    display: none; /* ¡ESTA LÍNEA ESTÁ OCULTANDO TODO! */
-  }
-}
-
-/* Nuevos estilos optimizados */
-@media screen and (max-width: 480px) {
-  /* Header compacto */
-  .white-bar {
-    height: 50px;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-  }
-
-  /* Botón hamburguesa */
-  .mobile-menu-btn {
-    display: block;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    font-size: 28px;
-    background: var(--green);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    z-index: 1001;
-  }
-
-  /* Logo pequeño centrado */
-  .mobile-logo {
-    display: block;
-    text-align: center;
-    padding-top: 5px;
+  .mobile-menu-toggle {
+    display: block; /* Solo visible en móvil */
   }
   
-  .mobile-logo img {
-    height: 40px;
-    width: auto;
-  }
-
-  /* Menú principal (oculto inicialmente) */
-  nav ul {
-    display: none;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background: white;
+  #main-menu {
+    display: none; /* Menú oculto inicialmente en móvil */
     flex-direction: column;
-    padding: 10px 0;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  }
-
-  /* Items del menú */
-  nav ul li {
-    padding: 12px 20px;
-    font-size: 16px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-  }
-
-  /* Mostrar menú cuando tiene la clase 'active' */
-  nav ul.active {
-    display: flex;
-  }
-
-  /* Ajustar contenido principal */
-  main {
-    margin-top: 50px !important;
+    width: 100%;
   }
 }
 
-/* Ocultar elementos en desktop */
-@media screen and (min-width: 481px) {
-  .mobile-menu-btn, .mobile-logo {
-    display: none;
-  }
+.register-button:active {
+  transform: scale(0.98);
 }
-
-@media screen and (max-width: 480px) {
-  /* Espacio para el header fijo */
-  main {
-    margin-top: 60px !important;
-  }
-  
-  .udc-logo-container {
-    margin-top: 60px;
-  }
-}
-
 /* Estilos específicos para el botón de registro en móvil */
 html {
   scroll-behavior: smooth; 

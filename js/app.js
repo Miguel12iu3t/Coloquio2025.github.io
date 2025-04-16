@@ -96,16 +96,9 @@ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
 });
 
 function toggleMobileMenu() {
-  const menu = document.querySelector("nav ul");
-  menu.classList.toggle("active");
+  const menu = document.getElementById("main-menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
-
-// Cerrar menú al hacer clic en un enlace
-document.querySelectorAll("nav ul li a").forEach(item => {
-  item.addEventListener("click", () => {
-    document.querySelector("nav ul").classList.remove("active");
-  });
-});
 
 // Cierra menús al hacer clic fuera
 document.addEventListener('click', function(e) {
