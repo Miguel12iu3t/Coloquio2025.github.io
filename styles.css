@@ -91,71 +91,80 @@ body {
   cursor: pointer;
 }
 
-/* Header móvil compacto */
+/* Elimina este bloque si existe (está causando problemas) */
 @media screen and (max-width: 480px) {
-  .white-bar {
-    height: 60px !important; /* Altura fija reducida */
-    overflow: hidden;
+  header {
+    display: none; /* ¡ESTA LÍNEA ESTÁ OCULTANDO TODO! */
   }
-  
+}
+
+/* Nuevos estilos optimizados */
+@media screen and (max-width: 480px) {
+  /* Header compacto */
+  .white-bar {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Botón hamburguesa */
   .mobile-menu-btn {
     display: block;
     position: absolute;
-    left: 15px;
-    top: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 100;
+    left: 10px;
+    top: 10px;
+    font-size: 28px;
+    background: var(--green);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    z-index: 1001;
   }
-  
+
+  /* Logo pequeño centrado */
   .mobile-logo {
     display: block;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   
   .mobile-logo img {
     height: 40px;
     width: auto;
   }
-  
-  #mainNav {
+
+  /* Menú principal (oculto inicialmente) */
+  nav ul {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 50px;
     left: 0;
     width: 100%;
     background: white;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    z-index: 99;
-  }
-  
-  #mainNav ul {
     flex-direction: column;
     padding: 10px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
-  
-  #mainNav li {
+
+  /* Items del menú */
+  nav ul li {
     padding: 12px 20px;
-    text-align: left;
+    font-size: 16px;
     border-bottom: 1px solid #eee;
+    text-align: left;
   }
-  
-  .register-container {
-    order: 0;
-    margin: 0;
-    padding: 15px;
+
+  /* Mostrar menú cuando tiene la clase 'active' */
+  nav ul.active {
+    display: flex;
   }
-  
-  .register-button {
-    width: 100%;
-    margin: 0;
-  }
-  
-  .menuDesplegable {
-    position: relative;
-    box-shadow: none;
-    width: 100%;
+
+  /* Ajustar contenido principal */
+  main {
+    margin-top: 50px !important;
   }
 }
 

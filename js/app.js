@@ -96,9 +96,16 @@ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
 });
 
 function toggleMobileMenu() {
-  const menu = document.getElementById("main-menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  const menu = document.querySelector("nav ul");
+  menu.classList.toggle("active");
 }
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll("nav ul li a").forEach(item => {
+  item.addEventListener("click", () => {
+    document.querySelector("nav ul").classList.remove("active");
+  });
+});
 
 // Cierra menús al hacer clic fuera
 document.addEventListener('click', function(e) {
@@ -113,44 +120,5 @@ document.addEventListener('click', function(e) {
   // Si el clic no fue en el botón de hamburguesa ni en el menú
   if (!e.target.closest('.mobile-menu-toggle') && !e.target.closest('#main-menu')) {
     mobileMenu.style.display = "none";
-  }
-});
-
-// Ajustar dinámicamente alturas en móvil
-function adjustMobileLayout() {
-  if (window.innerWidth <= 480) {
-    // Ajustar altura del header
-    document.querySelector('header').style.height = 'auto';
-    
-    // Asegurar espacio para el contenido
-    document.querySelector('main').style.marginTop = '20px';
-  }
-}
-
-// Ejecutar al cargar y al redimensionar
-window.addEventListener('load', adjustMobileLayout);
-window.addEventListener('resize', adjustMobileLayout);
-
-let menuAbierto = false;
-
-function toggleMenu() {
-  const nav = document.getElementById("mainNav");
-  menuAbierto = !menuAbierto;
-  
-  if (menuAbierto) {
-    nav.style.display = "block";
-    // Cerrar otros menús si están abiertos
-    document.getElementById("menuRegistro").style.display = "none";
-  } else {
-    nav.style.display = "none";
-  }
-}
-
-// Cerrar menús al hacer clic fuera
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.mobile-menu-btn') && 
-      !e.target.closest('#mainNav') &&
-      menuAbierto) {
-    toggleMenu();
   }
 });
