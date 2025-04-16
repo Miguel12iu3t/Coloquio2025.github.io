@@ -92,17 +92,85 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  .mobile-menu-toggle {
-    display: block; /* Solo visible en móvil */
+  /* Ajustes generales */
+  body {
+    text-align: center;
+    padding: 0 15px;
   }
-  
-  #main-menu {
-    display: none; /* Menú oculto inicialmente en móvil */
+
+  /* Header para móvil */
+  header.white-bar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav ul {
     flex-direction: column;
-    width: 100%;
+    gap: 10px;
+  }
+
+  /* Ajuste del logo principal */
+  .coloquio-logo-container {
+    margin-top: 80px; /* Espacio para el header fijo */
+  }
+
+  .coloquio-logo-container img {
+    width: 280px;
+  }
+
+  /* Contenido textual */
+  article p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  /* Títulos */
+  article h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  /* Menú de registro móvil */
+  .register-container {
+    order: 99; /* Lo coloca al final */
+    margin-top: 15px;
+  }
+
+  .register-button {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
+/* Mejoras específicas para el contenido */
+@media screen and (max-width: 480px) {
+  /* Ajuste de párrafos introductorios */
+  main > section > article:first-child p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Corrección para listas */
+  ul, ol {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  /* Elementos en negrita */
+  b, strong {
+    font-weight: 600;
+  }
+
+  /* Espaciado entre secciones */
+  article {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+}
 .register-button:active {
   transform: scale(0.98);
 }

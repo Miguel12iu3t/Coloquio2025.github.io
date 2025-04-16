@@ -115,3 +115,18 @@ document.addEventListener('click', function(e) {
     mobileMenu.style.display = "none";
   }
 });
+
+// Ajustar dinámicamente alturas en móvil
+function adjustMobileLayout() {
+  if (window.innerWidth <= 480) {
+    // Ajustar altura del header
+    document.querySelector('header').style.height = 'auto';
+    
+    // Asegurar espacio para el contenido
+    document.querySelector('main').style.marginTop = '20px';
+  }
+}
+
+// Ejecutar al cargar y al redimensionar
+window.addEventListener('load', adjustMobileLayout);
+window.addEventListener('resize', adjustMobileLayout);
