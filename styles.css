@@ -527,8 +527,24 @@ footer .school-image {
   opacity: 0.4;
 }
 @media screen and (max-width: 480px) {
+  .white-bar {
+    height: auto;
+    padding: 10px 0;
+  }
+
   header {
-    display: none;
+    display: block; /* mostrarlo de nuevo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    font-size: 14px;
+    margin: 5px 0;
+    bottom: 0;
   }
   .udc-logo img {
     width: 100px;
